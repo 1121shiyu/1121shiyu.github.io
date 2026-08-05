@@ -65,7 +65,7 @@ jobs:
 
 
 
-        export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+        export remote_repo="https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git"
 
 
 
