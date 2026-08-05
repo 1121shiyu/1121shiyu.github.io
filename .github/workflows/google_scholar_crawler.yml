@@ -1,77 +1,87 @@
 name: Get Citation Data
 
 
-# =====================================================
-# Trigger
-# =====================================================
-
 on:
-  # GitHub Pages build 完成后触发
+
   page_build:
 
-  # 每天 UTC 08:00 自动更新
-  # 北京时间 = UTC+8
-  # 即北京时间每天16:00执行
   schedule:
+
     - cron: '0 8 * * *'
 
 
-# =====================================================
-# Job
-# =====================================================
-
 jobs:
 
+
   build:
+
 
     runs-on: ubuntu-latest
 
 
+
     steps:
 
-      # 拉取仓库代码
+
       - name: Checkout repository
+
         uses: actions/checkout@v4
 
 
 
-      # 安装 Python 环境依赖
+
       - name: Install requirements
+
         run: |
+
           sudo apt-get update
+
           sudo apt-get install -y python3-setuptools
 
 
 
-      # 运行 Google Scholar crawler
+
       - name: Run Google Scholar crawler
+
         env:
+
           GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
 
+
         run: |
+
 
           cd ./google_scholar_crawler
 
+
+          echo "Installing python dependencies..."
+
+
           python3 -m pip install -r requirements.txt
 
-          python3 main.py
+
+
+          echo "Starting crawler..."
 
 
 
-      # =================================================
-      # Commit generated json
-      # Push to google-scholar-stats branch
-      # =================================================
+          timeout 300 python3 -u main.py
+
+
+
 
       - name: Update citation data
 
+
         run: |
+
 
           cd ./google_scholar_crawler/results
 
 
-          # 初始化临时git仓库
+
           git init
+
 
 
           git config --local user.name "${GITHUB_ACTOR}"
@@ -80,20 +90,16 @@ jobs:
 
 
 
-          # GitHub Token认证
           export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
 
 
 
-          # 添加生成的数据文件
           git add *.json
 
 
 
-          # 提交
           git commit -m "Updated Citation Data"
 
 
 
-          # 强制推送到google-scholar-stats分支
           git push "${remote_repo}" HEAD:google-scholar-stats --force
