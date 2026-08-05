@@ -8,7 +8,7 @@
 
 # 网站标题
 # 浏览器标签页显示
-title                    : "【必须填写：姓名 / 个人主页标题】"
+title                    : "Shengrong Li"
 
 
 # 网站简介
@@ -18,7 +18,7 @@ description              : "【必须填写：一句话个人介绍，例如研�
 
 # GitHub仓库地址
 # 如果部署到自己的仓库，需要修改
-repository               : "【必须填写：GitHub用户名/仓库名】"
+repository               : "1121shiyu/ShengrongLi"
 
 
 # Google Scholar统计功能
