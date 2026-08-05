@@ -6,27 +6,30 @@ on:
   page_build:
 
   schedule:
-
     - cron: '0 8 * * *'
+
 
 
 jobs:
 
-
   build:
 
-
     runs-on: ubuntu-latest
-
 
 
     steps:
 
 
       - name: Checkout repository
-
         uses: actions/checkout@v4
 
+
+
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v5
+
+        with:
+          python-version: '3.9'
 
 
 
@@ -34,10 +37,11 @@ jobs:
 
         run: |
 
-          sudo apt-get update
+          cd ./google_scholar_crawler
 
-          sudo apt-get install -y python3-setuptools
+          python -m pip install --upgrade pip
 
+          python -m pip install -r requirements.txt
 
 
 
@@ -47,26 +51,11 @@ jobs:
 
           GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
 
-
         run: |
-
 
           cd ./google_scholar_crawler
 
-
-          echo "Installing python dependencies..."
-
-
-          python3 -m pip install -r requirements.txt
-
-
-
-          echo "Starting crawler..."
-
-
-
-          timeout 300 python3 -u main.py
-
+          python -u main.py
 
 
 
@@ -79,9 +68,7 @@ jobs:
           cd ./google_scholar_crawler/results
 
 
-
           git init
-
 
 
           git config --local user.name "${GITHUB_ACTOR}"
@@ -97,9 +84,7 @@ jobs:
           git add *.json
 
 
-
           git commit -m "Updated Citation Data"
-
 
 
           git push "${remote_repo}" HEAD:google-scholar-stats --force
