@@ -1,27 +1,20 @@
 # Welcome to Jekyll!
-# Personal Homepage Configuration Template
-# Please replace all fields marked with 【】
+# Personal Homepage Configuration
 
 # ============================================================
 # Site Settings
 # ============================================================
-# 网站标题
-# 浏览器标签页显示
+
 title                    : "Shengrong Li"
 
+description              : "Personal homepage of Shengrong Li"
 
-# 网站简介
-# 用于SEO和搜索引擎描述
-description              : "【必须填写：一句话个人介绍，例如研究方向、职位、机构】"
-
-
-# GitHub仓库地址
-# 如果部署到自己的仓库，需要修改
 repository               : "1121shiyu/ShengrongLi"
 
+# GitHub Project Pages 必需
+baseurl                  : "/ShengrongLi"
 
-# Google Scholar统计功能
-# 学术主页建议保留
+# Google Scholar citation statistics
 google_scholar_stats_use_cdn : true
 
 
@@ -30,9 +23,8 @@ google_scholar_stats_use_cdn : true
 # Google Analytics
 # ============================================================
 
-# 网站访问统计
-# 没有Google Analytics账号可以留空
-google_analytics_id      : 【可选：Google Analytics ID】
+# Optional
+google_analytics_id      :
 
 
 
@@ -40,45 +32,38 @@ google_analytics_id      : 【可选：Google Analytics ID】
 # SEO Verification
 # ============================================================
 
-# 搜索引擎验证
-# 如果希望Google/Bing/百度收录，可填写
-
-google_site_verification : 【可选：Google Search Console验证码】
-
-bing_site_verification   : 【可选：Bing Webmaster验证码】
-
-baidu_site_verification  : 【可选：百度站长验证码】
+google_site_verification :
+bing_site_verification   :
+baidu_site_verification  :
 
 
 
 # ============================================================
 # Site Author
-# 个人信息区域（重点修改）
 # ============================================================
 
 author:
 
-  # 姓名
   name             : "Shengrong Li"
 
 
-  # 头像路径
-  # 图片放置位置：
-  # images/xxx.png
+  # Avatar image path
+  # Example:
+  # images/avatar.png
   avatar           : "images/android-chrome-512x512.png"
 
 
-  # 简短介绍
-  # 会显示在侧边栏
-  bio              : "【必须填写：身份/职位/研究方向】"
+  # Short introduction shown in sidebar
+  bio              :
 
 
-  # 所在地区
-  location         : "【必须填写：城市, 国家】"
+  # Example:
+  # Beijing, China
+  location         :
 
 
-  # 工作/学校单位
-  employer         : "【建议填写：学校/研究机构/公司】"
+  # University / Institute / Company
+  employer         :
 
 
 
@@ -86,53 +71,41 @@ author:
   # Academic Profiles
   # ========================================================
 
-
-  # PubMed主页
-  pubmed           : 【可选：PubMed主页链接】
+  pubmed           :
 
 
-  # Google Scholar
-  # 如果是学术主页强烈建议填写
-  googlescholar    : "【建议填写：Google Scholar主页链接】"
+  # Google Scholar profile URL
+  # Example:
+  # https://scholar.google.com/citations?user=XXXX
 
-
-
-  # Email
-  email            : "【必须填写：公开邮箱】"
+  googlescholar    :
 
 
 
-  # ResearchGate
-  researchgate     : "【可选：ResearchGate主页】"
+  email            :
 
 
+  researchgate     :
 
-  # 个人主页网址
-  uri              : "【可选：个人网站地址】"
+
+  uri              :
 
 
 
   # ========================================================
-  # Developer / Social Links
-  # 根据实际情况填写
-  # 不使用保持为空
+  # Social Links
   # ========================================================
 
+  github           :
 
-  github           : "【可选：GitHub用户名】"
+  linkedin         :
 
+  orcid            :
 
-  linkedin         : "【可选：LinkedIn用户名】"
-
-
-  orcid            : "【可选：ORCID编号】"
-
-
-  dblp             : "【可选：DBLP主页】"
+  dblp             :
 
 
 
-  # 以下社交账号一般学术主页不用
   bitbucket        :
   codepen          :
   dribbble         :
@@ -162,14 +135,12 @@ author:
 # Reading Files
 # ============================================================
 
-# 不需要修改
 include:
   - .htaccess
   - _pages
   - files
 
 
-# 不需要修改
 exclude:
   - docs
   - google_scholar_crawler
@@ -204,10 +175,10 @@ exclude:
 # Encoding / Markdown
 # ============================================================
 
-# 保持默认
 keep_files:
   - .git
   - .svn
+
 
 encoding: "utf-8"
 
@@ -219,11 +190,14 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 # Conversion
 # ============================================================
 
-# 保持默认
 markdown: kramdown
+
 highlighter: rouge
+
 lsi: false
+
 excerpt_separator: "\n\n"
+
 incremental: false
 
 
@@ -232,32 +206,42 @@ incremental: false
 # Markdown Processing
 # ============================================================
 
-# 保持默认
 kramdown:
+
   input: GFM
+
   hard_wrap: false
+
   auto_ids: true
+
   footnote_nr: 1
+
   entity_output: as_char
+
   toc_levels: 1..6
+
   smart_quotes: lsquo,rsquo,ldquo,rdquo
+
   enable_coderay: false
 
 
 
 # ============================================================
-# Page Defaults
+# Defaults
 # ============================================================
 
-# 所有页面默认使用default布局
-# 保持默认
-
 defaults:
+
   - scope:
+
       path: ""
+
       type: pages
+
     values:
+
       layout: default
+
       author_profile: true
 
 
@@ -266,11 +250,10 @@ defaults:
 # Sass
 # ============================================================
 
-# CSS配置
-# 保持默认
-
 sass:
+
   sass_dir: _sass
+
   style: compressed
 
 
@@ -279,14 +262,9 @@ sass:
 # Output
 # ============================================================
 
-# URL格式
-# 保持默认
-
 permalink: /:categories/:title/
 
 
-# 时区
-# 根据所在地区调整
 timezone: Asia/Shanghai
 
 
@@ -295,13 +273,16 @@ timezone: Asia/Shanghai
 # Plugins
 # ============================================================
 
-# 保持默认
-
 plugins:
+
   - jekyll-paginate
+
   - jekyll-sitemap
+
   - jekyll-gist
+
   - jekyll-feed
+
   - jekyll-redirect-from
 
 
@@ -310,10 +291,10 @@ plugins:
 # HTML Compression
 # ============================================================
 
-# 页面压缩
-# 保持默认
-
 compress_html:
+
   clippings: all
+
   ignore:
+
     envs: development
