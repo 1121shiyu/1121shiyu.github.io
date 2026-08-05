@@ -17,8 +17,8 @@ redirect_from:
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
 
-<span class='anchor' id='about-me'></span>
 
+<span class='anchor' id='about-me'></span>
 
 # About Me
 
@@ -27,51 +27,59 @@ redirect_from:
 
 建议包含：
 
-- 当前身份（例如 Ph.D. Candidate / Research Scientist / Professor）
-- 所属机构（University / Institute / Company）
+- 当前职位/身份
+- 所属机构
 - 研究方向
 - 学术背景
-- 主要研究成果
+- 代表性成果
 
 
 示例：
 
-I am currently a 【position】 at 【institution】.
+I am currently a 【Position】 at 【Institution】.
 
-My research interests include 【research area 1】, 【research area 2】, and 【research area 3】.
+My research interests include 【Research Area 1】, 【Research Area 2】, and 【Research Area 3】.
 
-I received my 【degree】 from 【university】 in 【year】.
+I received my 【Degree】 from 【University】 in 【Year】.
 
 
 
 <br>
 
+
+
+<span class='anchor' id='research-interests'></span>
 
 # Research Interests
 
 
 【填写主要研究方向】
 
+
 例如：
 
+- Machine Learning
 - Computer Vision
 - Natural Language Processing
-- Machine Learning
 
 
 
 <br>
 
 
+
+<span class='anchor' id='news'></span>
+
 # 🔥 News
 
 
 【填写近期动态】
 
+
 格式：
 
-- *YYYY.MM*: 【事件描述】
-- *YYYY.MM*: 【事件描述】
+- *YYYY.MM*: 【News content】
+- *YYYY.MM*: 【News content】
 
 
 例如：
@@ -84,27 +92,33 @@ I received my 【degree】 from 【university】 in 【year】.
 <br>
 
 
+
+<span class='anchor' id='publications'></span>
+
 # 📝 Publications
 
 
 【填写论文列表】
 
-推荐：
+说明：
 
-- 重要论文使用 paper-box 卡片形式展示
-- 普通论文使用 Markdown 列表展示
+- 重要论文推荐使用 paper-box 展示
+- 其他论文可以使用普通 Markdown 列表
 
 
 <!--
 
-论文卡片模板：
+论文展示模板：
 
 <div class='paper-box'>
 <div class='paper-box-image'>
 <div>
-<div class="badge">会议/期刊名称，例如 CVPR 2026</div>
 
-<img src='images/论文图片文件名.png' alt="paper" width="100%">
+<div class="badge">
+【Conference / Journal】
+</div>
+
+<img src='images/【paper-image.png】' alt="paper" width="100%">
 
 </div>
 </div>
@@ -113,22 +127,22 @@ I received my 【degree】 from 【university】 in 【year】.
 <div class='paper-box-text' markdown="1">
 
 
-[论文标题](论文链接)
+[【Paper Title】](【Paper Link】)
 
 
-**作者列表**
+**【Author List】**
 
 
-[**Project Page**](项目链接)
+[**Project Page**](【Project Link】)
 
 
 <strong>
-<span class='show_paper_citations' data='Google Scholar论文ID'></span>
+<span class='show_paper_citations' data='【Google Scholar Citation ID】'></span>
 </strong>
 
 
-- 论文简介
-- 主要贡献
+- 【Paper summary】
+- 【Main contribution】
 
 
 </div>
@@ -138,14 +152,17 @@ I received my 【degree】 from 【university】 in 【year】.
 -->
 
 
-
 <br>
 
+
+
+<span class='anchor' id='honors-and-awards'></span>
 
 # 🎖 Honors and Awards
 
 
-【填写荣誉、奖项、奖学金等】
+【填写获得的荣誉、奖项、奖学金】
+
 
 格式：
 
@@ -156,15 +173,19 @@ I received my 【degree】 from 【university】 in 【year】.
 
 <br>
 
+
+
+<span class='anchor' id='education'></span>
 
 # 📖 Education
 
 
 【填写教育经历】
 
+
 格式：
 
-- *YYYY.MM - YYYY.MM*, Degree, Department, University
+- *YYYY.MM - YYYY.MM*, 【Degree】, 【Department】, 【University】
 
 例如：
 
@@ -177,67 +198,84 @@ I received my 【degree】 from 【university】 in 【year】.
 <br>
 
 
+
+<span class='anchor' id='invited-talks'></span>
+
 # 💬 Invited Talks
 
 
-【填写受邀报告、学术讲座等（如果有）】
+【填写受邀报告、学术会议演讲（如果有）】
+
 
 格式：
 
-- *YYYY.MM*, Talk Title, Conference / Organization
+- *YYYY.MM*, 【Talk Title】, 【Conference / Organization】
 
 如果有视频：
 
-- *YYYY.MM*, Talk Title, Conference / Organization | [video](URL)
+- *YYYY.MM*, 【Talk Title】, 【Conference / Organization】 | [video](URL)
 
 
 
 <br>
 
+
+
+<span class='anchor' id='research-experience'></span>
 
 # 💻 Research Experience
 
 
 【填写科研经历、实习经历、工作经历】
 
+
 格式：
 
-- *YYYY.MM - YYYY.MM*, Institution / Company, Position
+- *YYYY.MM - YYYY.MM*, 【Institution / Company】, 【Position】
 
 例如：
 
-- *2025.06 - 2025.09*, XXX Laboratory, Research Intern
+- *2025.06 - 2025.09*, 【Laboratory Name】, Research Intern
 
 
 
 <br>
 
+
+
+<span class='anchor' id='academic-services'></span>
 
 # 📚 Academic Services
 
 
 【可选：填写学术服务】
 
+
 例如：
 
 - Reviewer for 【Conference / Journal】
 - Teaching Assistant for 【Course】
+- Organizer of 【Workshop / Event】
 
 
 
 <br>
 
 
+
+<span class='anchor' id='contact'></span>
+
 # 📫 Contact
 
 
 【填写联系方式】
 
+
 Email:
 
-【邮箱地址】
+【Email Address】
 
 
 Office:
 
-【办公室地址】
+【Office Location】
