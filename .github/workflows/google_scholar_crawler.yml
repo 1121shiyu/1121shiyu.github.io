@@ -9,8 +9,8 @@ on:
     - cron: '0 8 * * *'
 
 
+# 允许 Action push 到仓库
 
-# 允许 GitHub Actions 写入仓库
 permissions:
 
   contents: write
@@ -30,22 +30,14 @@ jobs:
     steps:
 
 
-      # 拉取仓库代码
+
       - name: Checkout repository
 
         uses: actions/checkout@v4
 
-        with:
-
-          token: ${{ secrets.GITHUB_TOKEN }}
 
 
-
-
-      # 使用 Python 3.9
-      # scholarly==1.5.1 对 Python 3.9 更稳定
-
-      - name: Setup Python
+      - name: Setup Python 3.9
 
         uses: actions/setup-python@v5
 
@@ -55,30 +47,17 @@ jobs:
 
 
 
-
-      # 安装依赖
-
       - name: Install requirements
 
         run: |
 
-
           cd ./google_scholar_crawler
-
-
-          python -m pip install --upgrade pip
-
 
           python -m pip install -r requirements.txt
 
 
 
-
-
-      # 执行 Google Scholar crawler
-
       - name: Run Google Scholar crawler
-
 
         env:
 
@@ -87,18 +66,12 @@ jobs:
 
         run: |
 
-
           cd ./google_scholar_crawler
-
 
           python -u main.py
 
 
 
-
-
-
-      # 推送生成的数据到 google-scholar-stats 分支
 
       - name: Update citation data
 
@@ -121,9 +94,7 @@ jobs:
 
 
 
-
           export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-
 
 
 
@@ -131,9 +102,7 @@ jobs:
 
 
 
-
           git commit -m "Updated Citation Data"
-
 
 
 
