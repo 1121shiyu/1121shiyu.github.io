@@ -14,6 +14,7 @@ redirect_from:
 {% else %}
 {% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
 {% endif %}
+
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
 
@@ -23,24 +24,25 @@ redirect_from:
 # About Me
 
 
-【填写个人简介】
+<!--
 
-建议包含：
+Write your personal introduction here.
 
-- 当前职位/身份
-- 所属机构
-- 研究方向
-- 学术背景
-- 代表性成果
+Suggested content:
 
+- Current position
+- Affiliation
+- Research interests
+- Academic background
+- Representative achievements
 
-示例：
+Example:
 
-I am currently a 【Position】 at 【Institution】.
+I am currently a Ph.D. student at XXX University.
 
-My research interests include 【Research Area 1】, 【Research Area 2】, and 【Research Area 3】.
+My research interests include XXX, XXX, and XXX.
 
-I received my 【Degree】 from 【University】 in 【Year】.
+-->
 
 
 
@@ -53,14 +55,17 @@ I received my 【Degree】 from 【University】 in 【Year】.
 # Research Interests
 
 
-【填写主要研究方向】
+<!--
 
+List your main research interests here.
 
-例如：
+Example:
 
 - Machine Learning
 - Computer Vision
 - Natural Language Processing
+
+-->
 
 
 
@@ -73,19 +78,20 @@ I received my 【Degree】 from 【University】 in 【Year】.
 # 🔥 News
 
 
-【填写近期动态】
+<!--
 
+Add recent updates here.
 
-格式：
+Format:
 
-- *YYYY.MM*: 【News content】
-- *YYYY.MM*: 【News content】
+- *YYYY.MM*: News content
 
+Example:
 
-例如：
+- *2026.01*: Joined XXX Laboratory.
+- *2025.09*: Published a paper at XXX Conference.
 
-- *2026.01*: Joined 【Laboratory / Institution】
-- *2025.09*: Published a paper at 【Conference / Journal】
+-->
 
 
 
@@ -98,27 +104,31 @@ I received my 【Degree】 from 【University】 in 【Year】.
 # 📝 Publications
 
 
-【填写论文列表】
-
-说明：
-
-- 重要论文推荐使用 paper-box 展示
-- 其他论文可以使用普通 Markdown 列表
-
-
 <!--
 
-论文展示模板：
+Add publications here.
+
+Recommended:
+
+1. Use paper-box format for selected important papers.
+2. Use Markdown list format for other publications.
+
+
+Paper-box template:
+
+-->
+
+<!--
 
 <div class='paper-box'>
 <div class='paper-box-image'>
 <div>
 
 <div class="badge">
-【Conference / Journal】
+Conference / Journal
 </div>
 
-<img src='images/【paper-image.png】' alt="paper" width="100%">
+<img src='images/paper-image.png' alt="paper" width="100%">
 
 </div>
 </div>
@@ -127,22 +137,22 @@ I received my 【Degree】 from 【University】 in 【Year】.
 <div class='paper-box-text' markdown="1">
 
 
-[【Paper Title】](【Paper Link】)
+[Paper Title](Paper Link)
 
 
-**【Author List】**
+**Author List**
 
 
-[**Project Page**](【Project Link】)
+[**Project Page**](Project Link)
 
 
 <strong>
-<span class='show_paper_citations' data='【Google Scholar Citation ID】'></span>
+<span class='show_paper_citations' data='Google Scholar Citation ID'></span>
 </strong>
 
 
-- 【Paper summary】
-- 【Main contribution】
+- Paper summary.
+- Main contribution.
 
 
 </div>
@@ -150,6 +160,17 @@ I received my 【Degree】 from 【University】 in 【Year】.
 
 
 -->
+
+
+
+<!--
+
+Regular publication format:
+
+- [Paper Title](Paper Link), Author List, **Conference / Journal Year**
+
+-->
+
 
 
 <br>
@@ -161,13 +182,15 @@ I received my 【Degree】 from 【University】 in 【Year】.
 # 🎖 Honors and Awards
 
 
-【填写获得的荣誉、奖项、奖学金】
+<!--
 
+Add honors, awards, scholarships, and achievements.
 
-格式：
+Format:
 
-- *YYYY.MM*: 【Award Name】
-- *YYYY.MM*: 【Award Name】
+- *YYYY.MM*: Award Name
+
+-->
 
 
 
@@ -180,18 +203,20 @@ I received my 【Degree】 from 【University】 in 【Year】.
 # 📖 Education
 
 
-【填写教育经历】
+<!--
+
+Add educational background.
+
+Format:
+
+- *YYYY.MM - YYYY.MM*, Degree, Department, University
 
 
-格式：
-
-- *YYYY.MM - YYYY.MM*, 【Degree】, 【Department】, 【University】
-
-例如：
+Example:
 
 - *2022.09 - 2026.06*, Ph.D., Department of XXX, XXX University
 
-- *2018.09 - 2022.06*, Bachelor, Department of XXX, XXX University
+-->
 
 
 
@@ -204,16 +229,19 @@ I received my 【Degree】 from 【University】 in 【Year】.
 # 💬 Invited Talks
 
 
-【填写受邀报告、学术会议演讲（如果有）】
+<!--
 
+Add invited talks or academic presentations.
 
-格式：
+Format:
 
-- *YYYY.MM*, 【Talk Title】, 【Conference / Organization】
+- *YYYY.MM*: Talk Title, Conference / Organization
 
-如果有视频：
+For videos:
 
-- *YYYY.MM*, 【Talk Title】, 【Conference / Organization】 | [video](URL)
+- *YYYY.MM*: Talk Title, Conference / Organization | [video](URL)
+
+-->
 
 
 
@@ -226,16 +254,19 @@ I received my 【Degree】 from 【University】 in 【Year】.
 # 💻 Research Experience
 
 
-【填写科研经历、实习经历、工作经历】
+<!--
 
+Add research experience, internships, or professional experience.
 
-格式：
+Format:
 
-- *YYYY.MM - YYYY.MM*, 【Institution / Company】, 【Position】
+- *YYYY.MM - YYYY.MM*, Institution / Company, Position
 
-例如：
+Example:
 
-- *2025.06 - 2025.09*, 【Laboratory Name】, Research Intern
+- *2025.06 - 2025.09*, XXX Laboratory, Research Intern
+
+-->
 
 
 
@@ -248,14 +279,19 @@ I received my 【Degree】 from 【University】 in 【Year】.
 # 📚 Academic Services
 
 
-【可选：填写学术服务】
+<!--
 
+Optional.
 
-例如：
+Add academic services.
 
-- Reviewer for 【Conference / Journal】
-- Teaching Assistant for 【Course】
-- Organizer of 【Workshop / Event】
+Examples:
+
+- Reviewer for Conference / Journal
+- Teaching Assistant
+- Workshop Organizer
+
+-->
 
 
 
@@ -268,14 +304,19 @@ I received my 【Degree】 from 【University】 in 【Year】.
 # 📫 Contact
 
 
-【填写联系方式】
+<!--
 
+Add contact information.
+
+Example:
 
 Email:
 
-【Email Address】
+xxx@xxx.edu
 
 
 Office:
 
-【Office Location】
+XXX Building, XXX University
+
+-->
