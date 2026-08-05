@@ -60,13 +60,13 @@ baidu_site_verification  : 【可选：百度站长验证码】
 author:
 
   # 姓名
-  name             : "【必须填写：姓名】"
+  name             : "Shengrong Li"
 
 
   # 头像路径
   # 图片放置位置：
   # images/xxx.png
-  avatar           : "images/【必须填写：头像文件名】"
+  avatar           : "images/android-chrome-512x512.png"
 
 
   # 简短介绍
