@@ -9,10 +9,10 @@ title                    : "Shengrong Li"
 
 description              : "Personal homepage of Shengrong Li"
 
-repository               : "1121shiyu/ShengrongLi"
+repository               : "1121shiyu/1121shiyu.github.io"
 
 # GitHub Project Pages 必需
-baseurl                  : "/ShengrongLi"
+baseurl                  : ""
 
 # Google Scholar citation statistics
 google_scholar_stats_use_cdn : true
